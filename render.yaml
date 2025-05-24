@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: haos-lectura-automatica
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app --bind 0.0.0.0:10000"
+    envVars:
+      - key: OPENAI_API_KEY
+        value:
+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
